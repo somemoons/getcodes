@@ -1,0 +1,93 @@
+# 项目相关配置
+ruoyi:
+  # 名称
+  name: RuoYi
+  # 版本
+  version: 3.8.8
+  # 版权年份
+  copyright_year: 2024
+  # 文件路径 示例（ Windows配置D:/ruoyi/uploadPath，Linux配置 /home/ruoyi/uploadPath）
+  profile: D:/ruoyi/uploadPath
+  # 获取ip地址开关
+  address_enabled: false
+  # 验证码类型 math 数字计算 char 字符验证
+  captcha_type: math
+
+# 开发环境配置
+server:
+  # 服务器的HTTP端口，默认为8080
+  port: 8080
+  servlet:
+    # 应用的访问路径
+    context_path: /
+  tomcat:
+    # tomcat的URI编码
+    uri_encoding: UTF-8
+    # 连接数满后的排队数，默认为100
+    accept_count: 1000
+    threads:
+      # tomcat最大线程数，默认为200
+      max: 800
+      # Tomcat启动初始化的线程数，默认值10
+      min_spare: 100
+
+# 日志配置
+logging:
+  level:
+    com.zzyl: debug
+    org.springframework: warn
+
+# 用户配置
+user:
+  password:
+    # 密码最大错误次数
+    max_retry_count: 5
+    # 密码锁定时间（默认10分钟）
+    lock_time: 10
+
+# Spring配置
+spring:
+  # 数据源配置
+  datasource:
+    db_type: mysql
+    host: localhost
+    port: 3306
+    name: zzyl
+    username: root
+    password: password
+    pool:
+      min_idle: 5
+      max_size: 20
+      connect_timeout: 30
+      idle_timeout: 600
+      max_lifetime: 1800
+
+  # Redis配置
+  redis:
+    host: localhost
+    port: 6379
+    password: ""
+    database: 0
+    pool:
+      min_idle: 5
+      max_size: 20
+      connect_timeout: 30
+      idle_timeout: 600
+      max_lifetime: 1800
+    timeout: 30
+
+  # 缓存配置
+  cache:
+    cache_type: redis
+    key_prefix: "zzyl:"
+    timeout: 3600
+    max_size: 10000
+
+  # 任务配置
+  task:
+    pool:
+      core_size: 10
+      max_size: 50
+      queue_capacity: 200
+      keep_alive_seconds: 60
+

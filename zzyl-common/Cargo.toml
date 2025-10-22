@@ -1,0 +1,30 @@
+[package]
+name = "zzyl-common"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Common utilities and shared components for ZZYL"
+
+[dependencies]
+# Workspace dependencies
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+validator = { workspace = true }
+tracing = { workspace = true }
+argon2 = { workspace = true }
+jsonwebtoken = { workspace = true }
+
+# Additional dependencies
+regex = "1.0"
+base64 = "0.21"
+md5 = "0.7"
+sha2 = "0.10"
+hex = "0.4"
+rand = "0.8"
+url = "2.0"
+

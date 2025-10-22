@@ -1,0 +1,19 @@
+[package]
+name = "zzyl-system"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "System management module for ZZYL"
+
+[dependencies]
+# Workspace dependencies
+zzyl-common = { path = "../zzyl-common" }
+zzyl-framework = { path = "../zzyl-framework" }
+serde = { workspace = true }
+sqlx = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+

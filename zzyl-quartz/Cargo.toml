@@ -1,0 +1,21 @@
+[package]
+name = "zzyl-quartz"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Quartz scheduler module for ZZYL"
+
+[dependencies]
+# Workspace dependencies
+zzyl-common = { path = "../zzyl-common" }
+tokio = { workspace = true }
+serde = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+# Additional dependencies
+tokio-cron-scheduler = "0.9"
+

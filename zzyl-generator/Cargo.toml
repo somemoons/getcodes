@@ -1,0 +1,21 @@
+[package]
+name = "zzyl-generator"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Code generator module for ZZYL"
+
+[dependencies]
+# Workspace dependencies
+zzyl-common = { path = "../zzyl-common" }
+serde = { workspace = true }
+sqlx = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+# Additional dependencies
+handlebars = { workspace = true }
+

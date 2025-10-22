@@ -1,0 +1,68 @@
+[package]
+name = "zzyl-admin"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "MIT"
+description = "Admin web service entry point for ZZYL"
+
+[[bin]]
+name = "zzyl-admin"
+path = "src/main.rs"
+
+[dependencies]
+# Workspace dependencies
+zzyl-common = { path = "../zzyl-common" }
+zzyl-framework = { path = "../zzyl-framework" }
+zzyl-system = { path = "../zzyl-system" }
+zzyl-quartz = { path = "../zzyl-quartz" }
+zzyl-generator = { path = "../zzyl-generator" }
+zzyl-nursing-platform = { path = "../zzyl-nursing-platform" }
+zzyl-oss = { path = "../zzyl-oss" }
+
+# Web Framework
+axum = { workspace = true }
+tokio = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+hyper = { workspace = true }
+
+# Database
+sqlx = { workspace = true }
+sea-orm = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# Configuration
+config = { workspace = true }
+dotenvy = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+# Security
+jsonwebtoken = { workspace = true }
+argon2 = { workspace = true }
+uuid = { workspace = true }
+
+# Utilities
+chrono = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+validator = { workspace = true }
+
+# HTTP Client
+reqwest = { workspace = true }
+
+# Redis
+redis = { workspace = true }
+
+# AI/ML
+openai = { workspace = true }
+
+# Additional dependencies
+mime_guess = { workspace = true }
+tempfile = { workspace = true }

@@ -1,0 +1,40 @@
+[package]
+name = "zzyl-framework"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Framework core components for ZZYL"
+
+[dependencies]
+# Workspace dependencies
+zzyl-common = { path = "../zzyl-common" }
+axum = { workspace = true }
+tokio = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+hyper = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sqlx = { workspace = true }
+sea-orm = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+jsonwebtoken = { workspace = true }
+redis = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+config = { workspace = true }
+dotenvy = { workspace = true }
+
+# Additional dependencies
+reqwest = { workspace = true }
+sysinfo = { workspace = true }
+mime_guess = { workspace = true }
+base64 = "0.21"
+md5 = "0.7"
+sha2 = "0.10"
+rand = "0.8"
+

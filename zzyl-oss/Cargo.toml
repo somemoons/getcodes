@@ -1,0 +1,19 @@
+[package]
+name = "zzyl-oss"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Object Storage Service module for ZZYL"
+
+[dependencies]
+# Workspace dependencies
+zzyl-common = { path = "../zzyl-common" }
+serde = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+# Additional dependencies
+aws-sdk-s3 = "1.0"
+tokio = { workspace = true }
+
